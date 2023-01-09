@@ -13,7 +13,7 @@
 - router DOM을 사용하지 않아도 됌
 - 파일 이름 = url 주소 (컴포넌트 이름!= url 주소)
 - export default로 컴포넌트를 만들어줘야함
-##### 🌀 예외사항
+###### 🌀 예외사항
     -  pages/index파일은 애플리케이션의 홈페이지로 연결
     - jsx를 사용하고 있다면 react.js를 import 하지 않아도 됌 (useEffect이나 useState를 사용하려면 import 해와야함)
 
@@ -39,14 +39,18 @@
     - 라우터에 대한 정보를 얻을 수 있음
     - 라우터를 설치하거나 따로 렌더링 하지 않아도 작동
 
-#### 4. CSS 모듈
+#### 4. CSS 
 - module 파일 사용하기
-    ` NavBar.module.css` -> `className={styles.nav}`
+    - ` NavBar.module.css` -> `className={styles.nav}`
     - 페이지가 빌드 되면 NextJS가 클래스 이름을 무작위로 바꿔주기 때문에 클래스 이름이 충돌되지 않음
     - class 이름을 중복 고민 없이 재사용 가능
-    
+
 - 2개 이상의 className을 사용하여 모듈과 연결할 때
     - 문자열 리터럴
     - 배열을 만들어 .join을 사용
+
+##### 🌀 단점
+- module.css 파일을 분리해서 저장해야 하며,
+- className을 외워야 하는 번거로움이 있음
 
 
