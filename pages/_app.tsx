@@ -1,20 +1,24 @@
 import {AppProps} from 'next/app';
-// import "../styles/globals.css";
+import {QueryClient, QueryClientProvider} from 'react-query'
 import Layout from '../components/Layout';
+// import "../styles/globals.css";
+
 
 
 export default function App({Component, pageProps}:AppProps){
+    const client = new QueryClient();
+
     return(
-        <div>
             <Layout>
-            <Component {...pageProps} />
-            <style jsx global>{`
-                a {
-                    color:white;
-                }
-            `}</style>
+                <QueryClientProvider client={client}>
+                    <Component {...pageProps} />
+                    <style jsx global>{`
+                        a {
+                            color:white;
+                        }
+                    `}</style>
+                </QueryClientProvider>
             </Layout>
-        </div>
     )
 }
 
