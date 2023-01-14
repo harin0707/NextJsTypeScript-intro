@@ -53,4 +53,21 @@
 - module.css 파일을 분리해서 저장해야 하며,
 - className을 외워야 하는 번거로움이 있음
 
+- styled jsx를 사용하면 컴포넌트 내에 한정되어 적용됌
+
+#### 5. _app.js
+- 전역 스타일링(global Style) 가능
+    - pages 폴더 안에서 가장 우선적으로 실행
+
+- Component와 pageProps를 인자로 넘겨받아서 렌더링
+
+
+#### 6. 패키지
+- 흔하게 쓰이는 기능들을 내장 패키지를 이용하여 편리하게 구현 가능
+ex) next/head
+
+
+
+
+    
 
