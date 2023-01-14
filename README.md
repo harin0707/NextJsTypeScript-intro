@@ -79,6 +79,7 @@ ex) next/image
         permanent: false,}```
     
 - rewrite
-    - user가 console을 통해 url 변화를 확인할 수 없기 때문에 숨겨야 하는 url에 나타나는 API키를 숨길 수 있음
+    - user가 url 변화를 확인할 수 없기 때문에 숨겨야 하는 url에 나타나는 API키를 숨길 수 있음 +env파일 활용(깃에서 숨김)
+    - url 마스킹 기능
     
 
