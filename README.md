@@ -65,7 +65,11 @@
 #### 6. 패키지
 - 흔하게 쓰이는 기능들을 내장 패키지를 이용하여 편리하게 구현 가능
 ex) next/head
+ex) next/image
 
+#### 7. data fetching
+- API key 숨김기능
+    - 
 
 
 
