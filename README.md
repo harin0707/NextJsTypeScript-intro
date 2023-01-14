@@ -67,11 +67,18 @@
 ex) next/head
 ex) next/image
 
-#### 7. data fetching
+#### 7. data fetching & redirect
 - API key 숨김기능
-    - 
+    
 
-
-
+#### 8. redirect, rewrite
+- config 파일에서 쉽게 처리 가능
+- redirect
+    - ```{source: "/oldpath/:path*",
+        destination: '/newpath/:path*",
+        permanent: false,}```
+    
+- rewrite
+    - user가 console을 통해 url 변화를 확인할 수 없기 때문에 숨겨야 하는 url에 나타나는 API키를 숨길 수 있음
     
 
