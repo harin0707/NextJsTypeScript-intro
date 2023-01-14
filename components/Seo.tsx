@@ -1,16 +1,14 @@
 import Head from "next/head";
-import HeadResult from '../types/common'
 
-type HeadProps = {
-    info : HeadResult
+type propsType =   {
+    title: string,
 }
 
-export default function Seo({info} : HeadProps) {
-    const {title} = info;
+export default function Seo({title} : propsType) {
     
     return(
         <Head>
-            <title>{title} | Next Movies</title>
+            <title> {title} | Next Movies</title>
         </Head>
     )
 }
