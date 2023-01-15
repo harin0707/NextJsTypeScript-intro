@@ -104,3 +104,11 @@ ex) next/image
 - url에 변수 넣는 방법
     - pages폴더 안에 [변수명].js 파일을 만들면 된다.
     - 파일명에 쓰인 변수명과 query 프로퍼티의 이름이 동일하다.
+
+- query에 나타난 정보를 숨길 수 있음
+- router를 통해 query 정보를 변수처럼 사용 가능(detail 페이지)
+- router.query.title 정보는 home에서 영화를 선택했을 때에만 받아올 수 있음
+    - 임의로 url을 바꿔서 상세페이지로 들어가면 router로 정보를 받아올 수 없음
+
+- onClick -> router.push({pathname:'', query:{}, },'마스킹할 url')
+- href -> href={{pathname:"", query:{},}} as=마스킹할 url
