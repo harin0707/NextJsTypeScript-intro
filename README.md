@@ -82,4 +82,11 @@ ex) next/image
     - user가 url 변화를 확인할 수 없기 때문에 숨겨야 하는 url에 나타나는 API키를 숨길 수 있음 +env파일 활용(깃에서 숨김)
     - url 마스킹 기능
     
+#### 9. 서버사이드 렌더링
+- 클라이언트 쪽에서는 작동하지 않고 서버(백엔드) 쪽에서만 작동
+- getServerSideProps()는 객체를 리턴
+    - props를 키 값으로 갖는 객체 -> MyApp 컴포넌트에서 pageProps로 받아와서 <Component {...pageProps}/>안에 넘겨주게 된다. 
+- 서버사이드렌더링-> 데이터가 유효할 때 화면이 보여지게?
+- or -> 데이터가 유효하지 않을 땐 로딩, 데이터가 유효할 때 화면 렌더링
 
+- 백엔드에서 받아온 props를 return해서 html 소스코드를 구성하게? -> reactJs가 내용물을 흡수해서 화면 구성 (hydratation)
