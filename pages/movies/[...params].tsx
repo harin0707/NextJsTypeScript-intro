@@ -1,6 +1,7 @@
 import { useRouter, NextRouter } from 'next/router';
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
+import Seo from '../../components/Seo'
 
 
 interface MovieDetailParams{
@@ -13,9 +14,7 @@ export default function Detail({params}:MovieDetailParams) {
 
     return(
         <div>
-            <Head>
-                <title> {title} | Movie</title>
-            </Head>
+            <Seo title={title}/>
             <h4>{title}</h4>
         </div>
     ) 
