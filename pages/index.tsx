@@ -3,8 +3,6 @@ import Seo  from "../components/Seo";
 import {useQuery} from 'react-query';
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-const API_KEY = "724b8aaa1e15cd140090c718dab6ece0";
-
 // interface IGetMoviesProps {
 //   page: number;
 //   results: IMovieProps[];
@@ -23,11 +21,11 @@ interface IMovieProps {
   genre_ids: [number];
 }
 
-function getMovies() {
-  return fetch(
-    `/api/movies`
-  ).then((response)=>response.json());
-}
+// function getMovies() {
+//   return fetch(
+//     `/api/movies`
+//   ).then((response)=>response.json());
+// }
 
 export default function Home({ results }: InferGetServerSidePropsType<GetServerSideProps>){
   // const {data, isLoading} = useQuery<IGetMoviesProps>(
@@ -52,6 +50,9 @@ export default function Home({ results }: InferGetServerSidePropsType<GetServerS
           grid-template-columns: 1fr 1fr;
           padding: 20px;
           gap: 20px;
+        }
+        .movie{
+          cursor: pointer,
         }
         .movie img {
           max-width: 100%;

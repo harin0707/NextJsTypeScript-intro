@@ -84,9 +84,23 @@ ex) next/image
     
 #### 9. 서버사이드 렌더링
 - 클라이언트 쪽에서는 작동하지 않고 서버(백엔드) 쪽에서만 작동
-- getServerSideProps()는 객체를 리턴
-    - props를 키 값으로 갖는 객체 -> MyApp 컴포넌트에서 pageProps로 받아와서 <Component {...pageProps}/>안에 넘겨주게 된다. 
-- 서버사이드렌더링-> 데이터가 유효할 때 화면이 보여지게?
-- or -> 데이터가 유효하지 않을 땐 로딩, 데이터가 유효할 때 화면 렌더링
 
-- 백엔드에서 받아온 props를 return해서 html 소스코드를 구성하게? -> reactJs가 내용물을 흡수해서 화면 구성 (hydratation)
+- getServerSideProps()는 객체를 리턴
+    - props: results을 반환값으로 갖는다.
+    - props를 키 값으로 갖는 객체 -> MyApp 컴포넌트에서 pageProps로 받아와서 `<Component {...pageProps}/>`안에 넘겨주게 된다. 
+    - `export default function Home({ results })` 서버사이드 렌더링을 통해 받아온 pagesProps는 각 컴포넌트에서 results로 받아오게 된다.
+
+- 서버사이드렌더링-> 데이터가 유효할 때 화면이 보여지게?
+    - or 데이터가 유효하지 않을 땐 로딩, 데이터가 유효할 때 화면 렌더링
+
+- 백엔드에서 받아온 props를 return(results 배열로), 소스코드에 명시 -> results배열을 가지고 reactJs가 내용물을 흡수해서 화면 구성 (hydratation)
+
+
+#### 10. 동적 라우팅(동적 url)
+- url에 변수를 삽입하여 동적으로 라우팅이 가능하게
+- pages 폴더 안에 abc.js 파일을 만들게 되면 /abc url에 접속했을때 보여지는 페이지를 만들 수 있다.
+- /abc/cdf로 라우팅되길 원한다면 pages>abc> index.js와 cdf.js파일을 만들면 된다. index.js파일은 /abc로 라우팅 했을 때 보이는 페이지를 만든다.
+
+- url에 변수 넣는 방법
+    - pages폴더 안에 [변수명].js 파일을 만들면 된다.
+    - 파일명에 쓰인 변수명과 query 프로퍼티의 이름이 동일하다.
