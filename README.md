@@ -112,3 +112,6 @@ ex) next/image
 
 - onClick -> router.push({pathname:'', query:{}, },'마스킹할 url')
 - href -> href={{pathname:"", query:{},}} as=마스킹할 url
+
+##### catch all url
+    
